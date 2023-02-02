@@ -39,7 +39,11 @@ createApp({
             }).then((response) => {
                 this.todo_list = response.data;
             })
-		}
+		},
+
+		// edit_language() {
+		// 	this.clicked = index
+		// }
     },
 
 }).mount('#app')
