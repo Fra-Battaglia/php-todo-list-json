@@ -1,1 +1,26 @@
-[{"language":"HTML","done":true},{"language":"CSS","done":true},{"language":"Responsive design","done":true},{"language":"Javascript","done":true},{"language":"PHP","done":true},{"language":"Laravael","done":false},{"language":"mamma","done":false},{"language":"merda","done":false}]
+[
+    {
+        "language": "HTML",
+        "done": true
+    },
+    {
+        "language": "CSS",
+        "done": true
+    },
+    {
+        "language": "Responsive design",
+        "done": true
+    },
+    {
+        "language": "Javascript",
+        "done": true
+    },
+    {
+        "language": "PHP",
+        "done": true
+    },
+    {
+        "language": "Laravel",
+        "done": false
+    }
+]

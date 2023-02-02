@@ -5,7 +5,8 @@ createApp({
 		return {
 			api_url: 'server.php',
 			todo_list: [],
-			language: ''
+			language: '',
+			clicked: ''
 		}
 	},
 
@@ -26,7 +27,19 @@ createApp({
                 this.language = '';
                 this.todo_list = response.data;
             })
-        }
+        },
+
+		remove_language(index) {
+			const data = {
+				delete: index
+			}
+
+			axios.post(this.api_url, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.todo_list = response.data;
+            })
+		}
     },
 
 }).mount('#app')
