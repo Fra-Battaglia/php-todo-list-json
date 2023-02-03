@@ -17,6 +17,8 @@ createApp({
 	},
 
 	methods: {
+
+		// AGGIUNTA DI UN ELEMENTO
         add_language() {
             const data = {
                 todo_input: this.language
@@ -29,6 +31,7 @@ createApp({
             })
         },
 
+		//CANCELLAZIONE DI UN ELEMENTO
 		remove_language(index) {
 			const data = {
 				delete: index

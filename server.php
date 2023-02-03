@@ -7,11 +7,12 @@
 	$todo_list = json_decode($string, true);
 
 	// Aggiungi voci alla lista
-	if(isset($_POST['todo_input']) && $_POST['todo_input'] != '') {
-		$todo_input = $_POST['todo_input'];
-		$todo_list[] = ["language" => $todo_input, "done" => false];
+	if(isset($_POST['todo_input'])/* && $_POST['todo_input'] != ''*/) {
 
-		file_put_contents('todo-list.json', json_encode($todo_list, JSON_PRETTY_PRINT));
+		$todo_list = add_language($todo_list, $_POST['todo_input']);
+
+		// $todo_input = $_POST['todo_input'];
+		// $todo_list[] = ["language" => $todo_input, "done" => false];
 	}
 
 	if(isset($_POST['delete'])) {

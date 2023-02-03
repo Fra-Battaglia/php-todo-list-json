@@ -1,3 +1,12 @@
+<?php 
+
+	// session_start();
+
+	// if (isset($_POST['email']) && $email_exist($_POST['email'])) {
+	// 	$user_data = get_user_data_by_email($email, $todo_list);
+	// }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
