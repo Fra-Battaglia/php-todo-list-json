@@ -31,7 +31,10 @@
 
 								<li v-for="item, index in todo_list" class="list-group-item p-2 d-flex justify-content-between align-items-center">
 									<div>{{ item.language }}</div>
-									<button class="btn btn-danger" @click="remove_language(index)"><i class="fa-solid fa-trash"></i></button>
+									<div class="buttons d-flex gap-3">
+										<button class="btn btn-warning" @click="edit_language(index)"><i class="fa-solid fa-edit"></i></button>
+										<button class="btn btn-danger" @click="remove_language(index)"><i class="fa-solid fa-trash"></i></button>
+									</div>
 								</li>
 
 							</ul>

@@ -1,5 +1,7 @@
 <?php
 
+	include __DIR__. '/functions.php'; 
+
 	// Prendo il json e lo metto in una stringa
 	$string = file_get_contents('todo-list.json');
 
@@ -21,16 +23,16 @@
 		file_put_contents('todo-list.json', json_encode($todo_list, JSON_PRETTY_PRINT));
 	}
 
-	// if(isset($_POST['edit'])) {
-	// 	// Individua l'elemento avente indice contenuto in $_POST['edit'] e lo sostituisce con il suo valore corrispondente che in questo caso è l'array
-	// 	$replacement = array(
-	// 		$_POST['edit'] => array(
-	// 			"language" => $_POST['language_edit'], 
-	// 			"done" => false
-	// 		)
-	// 	);
-	// 	$todo_list = array_replace($todo_list, $replacement);
-	// }
+	if(isset($_POST['edit'])) {
+		// Individua l'elemento avente indice contenuto in $_POST['edit'] e lo sostituisce con il suo valore corrispondente che in questo caso è l'array
+		$replacement = array(
+			$_POST['edit'] => array(
+				"language" => $_POST['language_edit'], 
+				"done" => false
+			)
+		);
+		$todo_list = array_replace($todo_list, $replacement);
+	}
 
 	header('Content-Type: application/json');
 	echo json_encode($todo_list);

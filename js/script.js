@@ -44,9 +44,21 @@ createApp({
             })
 		},
 
-		// edit_language() {
-		// 	this.clicked = index
-		// }
+		// Modifica di un elemento
+		edit_language(index) {
+			const data = {
+				edit: index,
+				language_edit: ''
+			}
+
+			axios.post(this.api_url, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.todo_list = response.data;
+            })
+
+			console.log(data.edit)
+		}
     },
 
 }).mount('#app')
